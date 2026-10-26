@@ -1,0 +1,45 @@
+/* Development tokens (light mode only) — replace with the approved Nyne brand palette and type. */
+:root {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --surface-2: #f1ebe2;
+  --line: #e2d9cc;
+  --text: #1f1a15;
+  --text-muted: #63584c;
+  --accent: #85642f;
+  --accent-ink: #ffffff;
+  --focus: #1f5fbf;
+  --pending: #a3601a;
+  --overlay: rgb(255 255 255 / 0.9);
+
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-body: 1.125rem; /* 18px */
+  --fs-small: 0.95rem;
+  --fs-h1: clamp(2.6rem, 6vw, 4.2rem);
+  --fs-h2: clamp(1.9rem, 4vw, 2.6rem);
+  --fs-h3: 1.45rem;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  --radius: 14px;
+  --tap: 48px;
+  --topbar-h: 68px;
+  --nav-h: 84px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 280ms;
+
+  color-scheme: light only;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}

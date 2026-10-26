@@ -1,0 +1,242 @@
+import type { MediaAsset } from './types';
+
+// DEVELOPMENT STAND-INS taken from nynehotels.com on 2026-10-26 via
+// scripts/fetch-site-images.mjs. Labels come from the site's filenames and
+// page placement. The client must approve or replace every image before WTM.
+const SITE = 'https://nynehotels.com';
+const CHECKED = '2026-10-26';
+
+const asset = (a: Omit<MediaAsset, 'verified' | 'approval' | 'credit'> & { credit?: string }): MediaAsset => ({
+  credit: 'Nyne Hotels',
+  verified: CHECKED,
+  approval: 'pending',
+  ...a,
+});
+
+export const media: MediaAsset[] = [
+  // ── Anugrah ────────────────────────────────────────────────
+  asset({
+    id: 'anugrah-hero',
+    property: 'anugrah',
+    label: 'Anugrah, aerial view',
+    alt: 'Aerial view of Anugrah: low pavilions with planted roofs around a long pool, with palms and the sea beyond',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah1920x1000.webp',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-hero-portrait',
+    property: 'anugrah',
+    label: 'Anugrah, aerial view',
+    alt: 'Aerial view of Anugrah pavilions beside the pool',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah-1024x1370-1.webp',
+    portraitOf: 'anugrah-hero',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-terrace',
+    property: 'anugrah',
+    label: 'Ocean-view terrace, Anugrah',
+    alt: 'Terrace with two lounge chairs looking over palms to the ocean',
+    rawFile: 'anugrah--Anugrah-right-image-600x900-1.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-interior',
+    property: 'anugrah',
+    label: 'Guest room, Anugrah (category to confirm)',
+    alt: 'Guest room with timber-panelled wall, king bed and sofa',
+    rawFile: 'anugrah--Anugrah-left-image-600x900-1.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-lounge',
+    property: 'anugrah',
+    label: 'Ocean-facing lounge, Anugrah (space to confirm)',
+    alt: 'Open-sided lounge with white sofas facing the ocean',
+    rawFile: 'anugrah--Location-1370x1024-1.jpg',
+    source: `${SITE}/anugrah/location/`,
+  }),
+  asset({
+    id: 'anugrah-premier-1',
+    property: 'anugrah',
+    label: 'Premier Room, Anugrah',
+    alt: 'Premier Room with king bed and glass doors open towards the beach',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah-Accommodation-Premier-Room-680x800-1.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-premier-2',
+    property: 'anugrah',
+    label: 'Premier Room, Anugrah',
+    alt: 'Premier Room with king bed and timber bench',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah-Accommodation-Premier-Room-785x620-2.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-junior-1',
+    property: 'anugrah',
+    label: 'Junior Suite, Anugrah',
+    alt: 'Junior Suite with king bed against a timber-panelled wall',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah-Accommodation-Junior-Suite-680x800-1.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-junior-2',
+    property: 'anugrah',
+    label: 'Junior Suite, Anugrah',
+    alt: 'Junior Suite with king bed, armchair and round coffee table',
+    rawFile: 'anugrah--Nyne-Hotels-Anugrah-Accommodation-Junior-Suite-785x620-2.jpg',
+    source: `${SITE}/anugrah/`,
+  }),
+  asset({
+    id: 'anugrah-dining',
+    property: 'anugrah',
+    label: 'Dining area, Anugrah',
+    alt: 'Courtyard dining area with tables beside a planted water garden',
+    rawFile: 'anugrah--Dining-1370x1024-1.jpg',
+    source: `${SITE}/anugrah/dining/`,
+  }),
+  asset({
+    id: 'anugrah-dish',
+    property: 'anugrah',
+    label: 'Plated dish, Anugrah',
+    alt: 'Plated main course with sliced cucumber ribbons on a white plate',
+    rawFile: 'anugrah--Dining-1000x800-2.jpg',
+    source: `${SITE}/anugrah/dining/`,
+  }),
+  asset({
+    id: 'anugrah-spa',
+    property: 'anugrah',
+    label: 'Massage treatment, Anugrah (stock-style image, confirm)',
+    alt: 'Hot stone massage with white flowers',
+    rawFile: 'anugrah--Wellness-Spa-1370x1024-1.jpg',
+    source: `${SITE}/anugrah/wellness-spa/`,
+  }),
+  asset({
+    id: 'anugrah-map',
+    property: 'anugrah',
+    label: 'Map: Anugrah, Bentota',
+    alt: 'Map of south-west Sri Lanka marking Anugrah at Bentota',
+    rawFile: 'anugrah--map-anugrah-1024x768-1.jpg',
+    source: `${SITE}/anugrah/location/`,
+  }),
+
+  // ── Anuprit ────────────────────────────────────────────────
+  asset({
+    id: 'anuprit-hero',
+    property: 'anuprit',
+    label: 'Anuprit, exterior',
+    alt: 'White multi-storey Anuprit building with balconies and a pool, surrounded by palms',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-1920x1000-1-1.webp',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-hero-portrait',
+    property: 'anuprit',
+    label: 'Anuprit, exterior',
+    alt: 'White Anuprit building with balconies above the pool',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-1024x1370-1.webp',
+    portraitOf: 'anuprit-hero',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-interior',
+    property: 'anuprit',
+    label: 'Guest room, Anuprit (category to confirm)',
+    alt: 'Guest room with king bed, artwork and green armchair',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-600x900-2.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-living',
+    property: 'anuprit',
+    label: 'Ocean-view living area, Anuprit (room to confirm)',
+    alt: 'Living area with white sofas and a balcony door opening to the ocean',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-right-600x900-1.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-deluxe',
+    property: 'anuprit',
+    label: 'Deluxe Room with Courtyard View, Anuprit',
+    alt: 'Deluxe Room with king bed, pendant lamp and armchairs',
+    rawFile: 'anuprit--Courtyard-View-Room-785x620-1.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-premier',
+    property: 'anuprit',
+    label: 'Premier Room with Ocean View, Anuprit',
+    alt: 'Premier Room with king bed, large artwork and white sofa',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-Ocean-View-Room-785x620-1.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-junior',
+    property: 'anuprit',
+    label: 'Junior Suite, Anuprit',
+    alt: 'Junior Suite with king bed, armchair and sofa',
+    rawFile: 'anuprit--Junior-Suite-785x620-1.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+  asset({
+    id: 'anuprit-table',
+    property: 'anuprit',
+    label: 'Table by Nyne, Anuprit',
+    alt: 'Table by Nyne restaurant with timber tables, white columns and ocean views',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-Dining-1370x1024-1.jpg',
+    source: `${SITE}/anuprit/dining/`,
+  }),
+  asset({
+    id: 'anuprit-table-lounge',
+    property: 'anuprit',
+    label: 'Table by Nyne lounge, Anuprit',
+    alt: 'Lounge seating inside Table by Nyne with the ocean beyond',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-Dining-800x850-1.jpg',
+    source: `${SITE}/anuprit/dining/`,
+  }),
+  asset({
+    id: 'anuprit-table-dish',
+    property: 'anuprit',
+    label: 'Dish at Table by Nyne, Anuprit',
+    alt: 'Plated rice dish with grilled meat and fresh salad',
+    rawFile: 'anuprit--table-by-nyne-900x900-2.jpg',
+    source: `${SITE}/anuprit/dining/`,
+  }),
+  asset({
+    id: 'anuprit-spa',
+    property: 'anuprit',
+    label: 'Massage treatment, Anuprit (stock-style image, confirm)',
+    alt: 'Hot stone massage with white flowers',
+    rawFile: 'anuprit--Wellness-Spa-1370x1024-1.jpg',
+    source: `${SITE}/anuprit/wellness-spa/`,
+  }),
+  asset({
+    id: 'anuprit-map',
+    property: 'anuprit',
+    label: 'Map: Anuprit, Bentota',
+    alt: 'Map of south-west Sri Lanka marking Anuprit at Bentota',
+    rawFile: 'anuprit--map-Anuprit-1024x768-1.jpg',
+    source: `${SITE}/anuprit/location/`,
+  }),
+
+  // ── Bentota ────────────────────────────────────────────────
+  asset({
+    id: 'bentota-coast',
+    property: 'bentota',
+    label: 'Bentota coastline at sunset',
+    alt: 'Aerial view at sunset of the Bentota coastline with low buildings among palms',
+    rawFile: 'anuprit--Nyne-Hotels-Anuprit-Location-1370x1024-2.jpg',
+    source: `${SITE}/anuprit/location/`,
+  }),
+  asset({
+    id: 'bentota-river',
+    property: 'bentota',
+    label: 'River excursion, Bentota area',
+    alt: 'Small boat on a calm river lined with mangroves',
+    rawFile: 'anuprit--Experience-640x810-1.jpg',
+    source: `${SITE}/anuprit/`,
+  }),
+];
+
+export const mediaById: Record<string, MediaAsset> = Object.fromEntries(media.map((m) => [m.id, m]));

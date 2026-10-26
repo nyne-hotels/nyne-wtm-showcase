@@ -1,0 +1,221 @@
+{
+  "anugrah-hero": {
+    "width": 1920,
+    "height": 1000,
+    "widths": [
+      640,
+      1024,
+      1600
+    ]
+  },
+  "anugrah-hero-portrait": {
+    "width": 1024,
+    "height": 1370,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "anugrah-terrace": {
+    "width": 600,
+    "height": 900,
+    "widths": [
+      600
+    ]
+  },
+  "anugrah-interior": {
+    "width": 600,
+    "height": 900,
+    "widths": [
+      600
+    ]
+  },
+  "anugrah-lounge": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anugrah-premier-1": {
+    "width": 680,
+    "height": 800,
+    "widths": [
+      640,
+      680
+    ]
+  },
+  "anugrah-premier-2": {
+    "width": 785,
+    "height": 620,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-junior-1": {
+    "width": 680,
+    "height": 800,
+    "widths": [
+      640,
+      680
+    ]
+  },
+  "anugrah-junior-2": {
+    "width": 785,
+    "height": 620,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-dining": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anugrah-dish": {
+    "width": 1000,
+    "height": 800,
+    "widths": [
+      640,
+      1000
+    ]
+  },
+  "anugrah-spa": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anugrah-map": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "anuprit-hero": {
+    "width": 1920,
+    "height": 1000,
+    "widths": [
+      640,
+      1024,
+      1600
+    ]
+  },
+  "anuprit-hero-portrait": {
+    "width": 1024,
+    "height": 1370,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "anuprit-interior": {
+    "width": 600,
+    "height": 900,
+    "widths": [
+      600
+    ]
+  },
+  "anuprit-living": {
+    "width": 600,
+    "height": 900,
+    "widths": [
+      600
+    ]
+  },
+  "anuprit-deluxe": {
+    "width": 785,
+    "height": 620,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-premier": {
+    "width": 785,
+    "height": 620,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-junior": {
+    "width": 785,
+    "height": 620,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-table": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anuprit-table-lounge": {
+    "width": 800,
+    "height": 850,
+    "widths": [
+      640,
+      800
+    ]
+  },
+  "anuprit-table-dish": {
+    "width": 900,
+    "height": 900,
+    "widths": [
+      640,
+      900
+    ]
+  },
+  "anuprit-spa": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anuprit-map": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "bentota-coast": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "bentota-river": {
+    "width": 640,
+    "height": 810,
+    "widths": [
+      640
+    ]
+  }
+}
