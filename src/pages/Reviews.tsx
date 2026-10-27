@@ -1,5 +1,6 @@
 import { googleSummary, reviewsFor } from '../content';
 import { StarIcon } from '../components/icons';
+import { SceneCarousel } from '../components/SceneCarousel';
 import { useProperty } from '../app/sections';
 
 const formatDate = (iso: string) =>
@@ -10,16 +11,14 @@ export function Reviews() {
   const summary = googleSummary[p.id];
   const list = reviewsFor(p.id);
   return (
-    <div className="page">
-      <p className="eyebrow">{p.name}</p>
-      <h1>Selected Guest Reviews</h1>
-      <p className="muted">
-        {summary.rating.toFixed(1)} on Google from {summary.count} reviews · checked {formatDate(summary.checked)}
-      </p>
-
-      <div className="reviews">
-        {list.map((r) => (
-          <figure key={r.reviewer} className="review">
+    <div className="page page--carousel page--reviews page--review-section">
+      <header className="page__heading">
+        <div><p className="eyebrow">{p.name}</p><h1>Guest impressions</h1></div>
+        <p className="page__aside">{summary.rating.toFixed(1)} on Google from {summary.count} reviews · checked {formatDate(summary.checked)}</p>
+      </header>
+      <SceneCarousel items={list} label="Guest reviews" itemLabel={(review) => review.reviewer} className="reviews-carousel" controls="slider">
+        {(r) => (
+          <figure className="review">
             {r.excerpt ? (
               <blockquote className="review__quote">
                 <p>“{r.excerpt}”</p>
@@ -45,8 +44,8 @@ export function Reviews() {
               </span>
             </figcaption>
           </figure>
-        ))}
-      </div>
+        )}
+      </SceneCarousel>
     </div>
   );
 }

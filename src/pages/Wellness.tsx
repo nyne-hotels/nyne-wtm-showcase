@@ -1,37 +1,31 @@
 import { ImageButton } from '../components/ImageButton';
-import { FactValue, locationLabel } from '../components/FactValue';
-import { PinIcon } from '../components/icons';
+import { FactValue } from '../components/FactValue';
+import { SceneCarousel } from '../components/SceneCarousel';
 import { useProperty } from '../app/sections';
 
 export function Wellness() {
   const p = useProperty()!;
-  const images = p.wellness.flatMap((e) => e.assetIds);
   return (
-    <div className="page">
-      <p className="eyebrow">{p.name}</p>
-      <h1>Wellness &amp; leisure</h1>
-      <div className="split-land">
-        <ul className="experiences">
-          {p.wellness.map((e) => (
-            <li key={e.id} className="experience">
-              <div className="block__head">
-                <h2 className="experience__title">{e.name}</h2>
-                <span className="badge">
-                  <PinIcon /> {locationLabel(e.locationType, p)}
-                </span>
+    <div className="page page--carousel page--wellness">
+      <header className="page__heading">
+        <div><p className="eyebrow">{p.name}</p><h1>Wellness &amp; leisure</h1></div>
+        <p className="page__aside">Restorative rituals and unhurried ways to move, indoors and out.</p>
+      </header>
+      <SceneCarousel items={p.wellness} label="Wellness experiences" itemLabel={(experience) => experience.name}>
+        {(experience) => (
+          <div className={`feature-scene ${!experience.assetIds[0] ? 'feature-scene--text' : ''}`}>
+            {experience.assetIds[0] && (
+              <div className="feature-scene__media">
+                <ImageButton ids={experience.assetIds} sizes="65vw" className="feature-scene__lead" eager />
               </div>
-              <p>
-                <FactValue fact={e.description} />
-              </p>
-            </li>
-          ))}
-        </ul>
-        <div className="block__media">
-          {images.map((id, i) => (
-            <ImageButton key={id} ids={images} index={i} sizes="(orientation: landscape) 55vw, 100vw" className="is-lead" />
-          ))}
-        </div>
-      </div>
+            )}
+            <div className="feature-scene__copy">
+              <h2>{experience.name}</h2>
+              <p className="lede"><FactValue fact={experience.description} /></p>
+            </div>
+          </div>
+        )}
+      </SceneCarousel>
     </div>
   );
 }

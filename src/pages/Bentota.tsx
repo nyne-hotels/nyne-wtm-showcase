@@ -1,6 +1,8 @@
 import { bentota } from '../content';
 import { ImageButton } from '../components/ImageButton';
 import { FactValue } from '../components/FactValue';
+import { SceneCarousel } from '../components/SceneCarousel';
+import { PinIcon } from '../components/icons';
 import { useProperty } from '../app/sections';
 
 const MAPS_URL: Record<string, string> = {
@@ -10,51 +12,32 @@ const MAPS_URL: Record<string, string> = {
 
 export function Bentota() {
   const p = useProperty()!;
-  const destImages = bentota.assetIds;
   return (
-    <div className="page">
-      <p className="eyebrow">{p.name} · Destination</p>
-      <h1>{bentota.title}</h1>
-
-      <div className="split-land">
-        <div>
-          <ImageButton ids={[p.mapAssetId]} sizes="(orientation: landscape) 55vw, 100vw" className="map" eager />
-          <a className="btn map__link" href={MAPS_URL[p.id]} target="_blank" rel="noreferrer">
-            Open in Google Maps
-          </a>
-        </div>
-        <div>
-          <p className="lede">
-            <FactValue fact={bentota.intro} />
-          </p>
-          <p className="muted">
-            <FactValue fact={bentota.access} />
-          </p>
-        </div>
-      </div>
-
-      <h2 className="section-title">Nearby experiences</h2>
-      <div className="grid grid--2-port grid--2-land">
-        {bentota.experiences.map((e) => (
-          <section key={e.id} className="card card--static">
-            {e.assetIds[0] && <ImageButton ids={e.assetIds} sizes="(min-width: 700px) 50vw, 100vw" className="card__img" />}
-            <div className="card__body">
-              <h3 className="card__title">{e.name}</h3>
-              <p className="muted">
-                <FactValue fact={e.description} />
-              </p>
+    <div className="page page--carousel page--bentota">
+      <header className="page__heading">
+        <div><p className="eyebrow">{p.name} · Destination</p><h1>{bentota.title}</h1></div>
+        <p className="page__aside"><FactValue fact={bentota.access} /></p>
+      </header>
+      <SceneCarousel items={bentota.experiences} label="Nearby experiences" itemLabel={(experience) => experience.name}>
+        {(experience, index) => {
+          const imageId = experience.assetIds[0] ?? bentota.assetIds[index % bentota.assetIds.length];
+          return (
+            <div className="feature-scene destination-scene">
+              <div className="feature-scene__media">
+                <ImageButton ids={[imageId]} sizes="65vw" className="feature-scene__lead" eager />
+                <a className="map-action" href={MAPS_URL[p.id]} target="_blank" rel="noreferrer" aria-label={`Open ${p.name} in Google Maps`} title="Open villa map">
+                  <PinIcon />
+                </a>
+              </div>
+              <div className="feature-scene__copy">
+                <h2>{experience.name}</h2>
+                <p className="lede"><FactValue fact={experience.description} /></p>
+                <p className="muted"><FactValue fact={bentota.intro} /></p>
+              </div>
             </div>
-          </section>
-        ))}
-      </div>
-
-      <div className="strip strip--wide">
-        {destImages
-          .filter((id) => !bentota.experiences.some((e) => e.assetIds.includes(id)))
-          .map((id) => (
-            <ImageButton key={id} ids={[id]} sizes="100vw" className="strip__item" />
-          ))}
-      </div>
+          );
+        }}
+      </SceneCarousel>
     </div>
   );
 }

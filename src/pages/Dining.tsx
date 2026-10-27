@@ -1,46 +1,33 @@
 import { ImageButton } from '../components/ImageButton';
-import { FactValue, locationLabel } from '../components/FactValue';
-import { PinIcon } from '../components/icons';
+import { FactValue } from '../components/FactValue';
+import { SceneCarousel } from '../components/SceneCarousel';
 import { useProperty } from '../app/sections';
 
 export function Dining() {
   const p = useProperty()!;
   return (
-    <div className="page">
-      <p className="eyebrow">{p.name}</p>
-      <h1>Dining</h1>
-      {p.dining.map((venue) => (
-        <section key={venue.id} className="block" aria-labelledby={`v-${venue.id}`}>
-          <div className="block__head">
-            <h2 id={`v-${venue.id}`}>{venue.name}</h2>
-            <span className="badge badge--accent">
-              <PinIcon /> {locationLabel(venue.locationType, p, venue.hostProperty)}
-            </span>
-          </div>
-          <div className="split-land">
-            <div>
-              <p className="lede">
-                <FactValue fact={venue.description} />
-              </p>
-              <FactValue
-                fact={venue.details}
-                render={(list) => (
-                  <ul className="list">
-                    {list.map((d) => (
-                      <li key={d}>{d}</li>
-                    ))}
-                  </ul>
-                )}
-              />
+    <div className="page page--carousel page--dining">
+      <header className="page__heading">
+        <div><p className="eyebrow">{p.name}</p><h1>Dining</h1></div>
+        <p className="page__aside">Intimate tables, thoughtful produce and the easy rhythm of the coast.</p>
+      </header>
+      <SceneCarousel items={p.dining} label="Dining venues" itemLabel={(venue) => venue.name}>
+        {(venue) => (
+          <div className="feature-scene">
+            <div className="feature-scene__media">
+              {venue.assetIds[0] && <ImageButton ids={venue.assetIds} sizes="65vw" className="feature-scene__lead" eager />}
+              {venue.assetIds[1] && <ImageButton ids={venue.assetIds} index={1} sizes="30vw" className="feature-scene__inset" />}
             </div>
-            <div className="block__media">
-              {venue.assetIds.map((id, i) => (
-                <ImageButton key={id} ids={venue.assetIds} index={i} sizes="(orientation: landscape) 55vw, 100vw" className={i === 0 ? 'is-lead' : ''} />
-              ))}
+            <div className="feature-scene__copy">
+              <h2>{venue.name}</h2>
+              <p className="lede"><FactValue fact={venue.description} /></p>
+              <FactValue fact={venue.details} render={(list) => (
+                <ul className="list">{list.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              )} />
             </div>
           </div>
-        </section>
-      ))}
+        )}
+      </SceneCarousel>
     </div>
   );
 }
