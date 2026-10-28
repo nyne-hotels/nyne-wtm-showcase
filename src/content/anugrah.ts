@@ -67,7 +67,6 @@ export const anugrah: Property = {
   wellness: [
     { id: 'spa', name: 'Spa treatments', locationType: 'on-site', description: pdfFact('Payable spa treatments are available for guests.'), assetIds: ['anugrah-spa'] },
     { id: 'beach-tennis', name: 'Beach tennis', locationType: 'on-site', description: pdfFact('Beach tennis is included among the hotel leisure facilities.'), assetIds: ['anugrah-beach-tennis'] },
-    { id: 'board-games', name: 'Board games', locationType: 'on-site', description: fact('Board games are listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-board-games'] },
     { id: 'bocce', name: 'Bocce on the lawn', locationType: 'on-site', description: fact('Bocce on the lawn is listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-bocce'] },
     { id: 'croquet', name: 'Croquet on the lawn', locationType: 'on-site', description: fact('Croquet on the lawn is listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-croquet'] },
     { id: 'art-classes', name: 'Art classes', locationType: 'on-site', description: fact('Creative art classes are listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-art-class'] },

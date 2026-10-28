@@ -12,7 +12,7 @@ export function Wellness() {
       </header>
       <SceneCarousel items={p.wellness} label="Wellness experiences" itemLabel={(experience) => experience.name}>
         {(experience) => (
-          <div className={`feature-scene ${!experience.assetIds[0] ? 'feature-scene--text' : ''}`}>
+          <div className={`feature-scene ${!experience.assetIds[0] ? 'feature-scene--text' : ''} ${experience.id === 'beach-tennis' ? 'feature-scene--beach-tennis' : ''}`}>
             {experience.assetIds[0] && (
               <div className="feature-scene__media">
                 <ImageButton ids={experience.assetIds} sizes="65vw" className="feature-scene__lead" eager />

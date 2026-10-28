@@ -45,13 +45,23 @@ export function PropertyLayout() {
 
   const isOverview = pathname === `/${property.id}`;
   const slideProperty = propertySlide ? properties[propertySlide.id] : null;
+  const currentSection = pathname.split('/')[2] ?? '';
+  const currentSectionIndex = Math.max(0, SECTIONS.findIndex((section) => section.path === currentSection));
+  const setSectionDirection = (targetSectionIndex: number) => {
+    document.documentElement.dataset.sectionDirection = targetSectionIndex >= currentSectionIndex ? 'forward' : 'backward';
+  };
 
   return (
     <div className={`shell shell--${property.id} ${propertySlide ? `shell--property-${propertySlide.direction} shell--property-${propertySlide.phase}` : ''}`}>
       <header className="topbar">
         <div className="topbar__left">
           {!isOverview && (
-            <Link to={upPath(pathname)} className="btn btn--ghost">
+            <Link
+              to={upPath(pathname)}
+              className="btn btn--ghost"
+              viewTransition
+              onClick={() => setSectionDirection(Math.max(0, currentSectionIndex - 1))}
+            >
               <BackIcon />
               <span className="topbar__label">Back</span>
             </Link>
@@ -73,8 +83,10 @@ export function PropertyLayout() {
                 key={id}
                 // Current property → its overview; other property → same section there.
                 to={target}
+                viewTransition={current}
                 state={!current ? { propertyTransition: id === 'anuprit' ? 'from-right' : 'from-left' } : undefined}
                 onClick={(event) => {
+                  if (current) setSectionDirection(0);
                   if (current || !isOverview || propertySlide || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
                   event.preventDefault();
                   setPropertySlide({ id, href: target, direction, phase: 'moving' });
@@ -120,7 +132,14 @@ export function PropertyLayout() {
 
       <nav className="section-nav" aria-label={`${property.name} sections`}>
         {SECTIONS.map((s) => (
-          <NavLink key={s.path} to={sectionHref(property.id, s.path)} end={s.path === ''} className="section-nav__item">
+          <NavLink
+            key={s.path}
+            to={sectionHref(property.id, s.path)}
+            end={s.path === ''}
+            className="section-nav__item"
+            viewTransition
+            onClick={() => setSectionDirection(SECTIONS.indexOf(s))}
+          >
             {s.label}
           </NavLink>
         ))}

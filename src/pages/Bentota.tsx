@@ -32,7 +32,6 @@ export function Bentota() {
               <div className="feature-scene__copy">
                 <h2>{experience.name}</h2>
                 <p className="lede"><FactValue fact={experience.description} /></p>
-                <p className="muted"><FactValue fact={bentota.intro} /></p>
               </div>
             </div>
           );

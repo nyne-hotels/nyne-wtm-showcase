@@ -98,11 +98,12 @@
     ]
   },
   "anugrah-beach-tennis": {
-    "width": 785,
-    "height": 415,
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
-      785
+      1024,
+      1600
     ]
   },
   "anugrah-board-games": {
@@ -114,59 +115,66 @@
     ]
   },
   "anugrah-bocce": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anugrah-croquet": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anugrah-art-class": {
-    "width": 785,
-    "height": 415,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
     ]
   },
   "anugrah-lunuganga": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anugrah-brief-garden": {
-    "width": 785,
-    "height": 415,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
     ]
   },
   "anugrah-madu-river": {
-    "width": 785,
-    "height": 415,
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
-      785
+      1024,
+      1600
     ]
   },
   "anugrah-water-sports": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anugrah-map": {
@@ -267,19 +275,21 @@
     ]
   },
   "anuprit-pickleball": {
-    "width": 785,
-    "height": 415,
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
-      785
+      1024,
+      1600
     ]
   },
   "anuprit-beach-tennis": {
-    "width": 785,
-    "height": 415,
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
-      785
+      1024,
+      1600
     ]
   },
   "anuprit-board-games": {
@@ -291,43 +301,48 @@
     ]
   },
   "anuprit-art-class": {
-    "width": 785,
-    "height": 415,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
     ]
   },
   "anuprit-lunuganga": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anuprit-brief-garden": {
-    "width": 785,
-    "height": 415,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
     ]
   },
   "anuprit-madu-river": {
-    "width": 785,
-    "height": 415,
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
-      785
+      1024,
+      1600
     ]
   },
   "anuprit-water-sports": {
-    "width": 785,
-    "height": 415,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
     ]
   },
   "anuprit-map": {
