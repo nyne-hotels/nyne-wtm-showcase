@@ -97,6 +97,78 @@
       1370
     ]
   },
+  "anugrah-beach-tennis": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-board-games": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-bocce": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-croquet": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-art-class": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-lunuganga": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-brief-garden": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-madu-river": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anugrah-water-sports": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
   "anugrah-map": {
     "width": 1024,
     "height": 768,
@@ -192,6 +264,70 @@
       640,
       1024,
       1370
+    ]
+  },
+  "anuprit-pickleball": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-beach-tennis": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-board-games": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-art-class": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-lunuganga": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-brief-garden": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-madu-river": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
+    ]
+  },
+  "anuprit-water-sports": {
+    "width": 785,
+    "height": 415,
+    "widths": [
+      640,
+      785
     ]
   },
   "anuprit-map": {

@@ -4,7 +4,7 @@
 //   npm run validate -- --release → also exit 1 if anything is still pending
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { properties, bentota, media, mediaById } from '../src/content';
+import { properties, bentotaByProperty, media, mediaById } from '../src/content';
 import { reviews } from '../src/content/reviews';
 import type { Fact } from '../src/content/types';
 import generated from '../src/content/media.generated.json';
@@ -59,8 +59,13 @@ for (const p of Object.values(properties)) {
   p.dining.forEach((v) => v.assetIds.forEach((id) => checkAsset(`${p.id}.dining.${v.id}`, id)));
   p.wellness.forEach((e) => e.assetIds.forEach((id) => checkAsset(`${p.id}.wellness.${e.id}`, id)));
 }
-walk('bentota', bentota);
-bentota.assetIds.forEach((id) => checkAsset('bentota', id));
+for (const [propertyId, destination] of Object.entries(bentotaByProperty)) {
+  walk(`bentota.${propertyId}`, destination);
+  destination.assetIds.forEach((id) => checkAsset(`bentota.${propertyId}`, id));
+  destination.experiences.forEach((experience) =>
+    experience.assetIds.forEach((id) => checkAsset(`bentota.${propertyId}.${experience.id}`, id)),
+  );
+}
 
 const built = generated as Record<string, unknown>;
 for (const m of media) {

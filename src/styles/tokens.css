@@ -12,8 +12,9 @@
   --pending: #a3601a;
   --overlay: rgb(255 255 255 / 0.9);
 
-  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --fs-body: 1.125rem; /* 18px */
   --fs-small: 0.95rem;

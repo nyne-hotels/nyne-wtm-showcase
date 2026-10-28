@@ -1,4 +1,4 @@
-import { bentota } from '../content';
+import { bentotaByProperty } from '../content';
 import { ImageButton } from '../components/ImageButton';
 import { FactValue } from '../components/FactValue';
 import { SceneCarousel } from '../components/SceneCarousel';
@@ -12,11 +12,11 @@ const MAPS_URL: Record<string, string> = {
 
 export function Bentota() {
   const p = useProperty()!;
+  const bentota = bentotaByProperty[p.id];
   return (
     <div className="page page--carousel page--bentota">
       <header className="page__heading">
         <div><p className="eyebrow">{p.name} · Destination</p><h1>{bentota.title}</h1></div>
-        <p className="page__aside"><FactValue fact={bentota.access} /></p>
       </header>
       <SceneCarousel items={bentota.experiences} label="Nearby experiences" itemLabel={(experience) => experience.name}>
         {(experience, index) => {

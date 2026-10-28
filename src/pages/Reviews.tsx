@@ -1,20 +1,15 @@
-import { googleSummary, reviewsFor } from '../content';
+import { reviewsFor } from '../content';
 import { StarIcon } from '../components/icons';
 import { SceneCarousel } from '../components/SceneCarousel';
 import { useProperty } from '../app/sections';
 
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-
 export function Reviews() {
   const p = useProperty()!;
-  const summary = googleSummary[p.id];
   const list = reviewsFor(p.id);
   return (
     <div className="page page--carousel page--reviews page--review-section">
       <header className="page__heading">
         <div><p className="eyebrow">{p.name}</p><h1>Guest impressions</h1></div>
-        <p className="page__aside">{summary.rating.toFixed(1)} on Google from {summary.count} reviews · checked {formatDate(summary.checked)}</p>
       </header>
       <SceneCarousel items={list} label="Guest reviews" itemLabel={(review) => review.reviewer} className="reviews-carousel" controls="slider">
         {(r) => (

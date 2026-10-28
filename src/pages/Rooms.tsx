@@ -11,7 +11,6 @@ export function Rooms() {
     <div className="page page--rooms">
       <header className="page__heading">
         <div><p className="eyebrow">{p.name}</p><h1>Rooms &amp; suites</h1></div>
-        <p className="page__aside">Private spaces shaped by sea air, quiet mornings and considered detail.</p>
       </header>
       <div className={`rooms-grid rooms-grid--${p.rooms.length}`}>
         {p.rooms.map((room, index) => (

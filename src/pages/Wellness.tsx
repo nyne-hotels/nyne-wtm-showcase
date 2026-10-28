@@ -9,7 +9,6 @@ export function Wellness() {
     <div className="page page--carousel page--wellness">
       <header className="page__heading">
         <div><p className="eyebrow">{p.name}</p><h1>Wellness &amp; leisure</h1></div>
-        <p className="page__aside">Restorative rituals and unhurried ways to move, indoors and out.</p>
       </header>
       <SceneCarousel items={p.wellness} label="Wellness experiences" itemLabel={(experience) => experience.name}>
         {(experience) => (

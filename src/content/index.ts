@@ -2,12 +2,12 @@ import type { Property, PropertyId } from './types';
 import { anugrah } from './anugrah';
 import { anuprit } from './anuprit';
 
-export { bentota } from './bentota';
+export { bentotaByProperty } from './bentota';
 export { media, mediaById } from './media';
 export { reviewsFor, googleSummary } from './reviews';
 
 /** Bump when content or media changes; shown on the prep screen. */
-export const CONTENT_VERSION = '2026.10.26-dev1';
+export const CONTENT_VERSION = '2026.10.28-things1';
 
 export const properties: Record<PropertyId, Property> = { anugrah, anuprit };
 export const propertyIds: PropertyId[] = ['anugrah', 'anuprit'];

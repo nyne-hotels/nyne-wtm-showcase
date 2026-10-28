@@ -9,7 +9,6 @@ export function Dining() {
     <div className="page page--carousel page--dining">
       <header className="page__heading">
         <div><p className="eyebrow">{p.name}</p><h1>Dining</h1></div>
-        <p className="page__aside">Intimate tables, thoughtful produce and the easy rhythm of the coast.</p>
       </header>
       <SceneCarousel items={p.dining} label="Dining venues" itemLabel={(venue) => venue.name}>
         {(venue) => (

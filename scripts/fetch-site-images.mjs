@@ -13,16 +13,18 @@ const PAGES = [
   'https://nynehotels.com/anugrah/location/',
   'https://nynehotels.com/anugrah/dining/',
   'https://nynehotels.com/anugrah/wellness-spa/',
+  'https://nynehotels.com/anugrah/things-to-do/',
   'https://nynehotels.com/anuprit/',
   'https://nynehotels.com/anuprit/location/',
   'https://nynehotels.com/anuprit/dining/',
   'https://nynehotels.com/anuprit/wellness-spa/',
+  'https://nynehotels.com/anuprit/things-to-do/',
 ];
 
 // Out of scope per the brief: offers, blog cards, Yala, other properties, logos.
 const EXCLUDE = [
   /Booking|Savings|Extended-Stay|Last-Minute|Offer/i,
-  /Yala|Surf|Turtle|Madu-River|Things-to-Know|Your-Guide|Stafford|Rock-Villa/i,
+  /Yala|Surf|Things-to-Know|Your-Guide|Stafford|Rock-Villa/i,
   /logo|icon|favicon|blank-image/i,
   /-\d{2,3}x\d{2,3}\.(png)$/i,
 ];
