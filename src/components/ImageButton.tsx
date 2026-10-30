@@ -10,10 +10,12 @@ interface Props {
   sizes?: string;
   className?: string;
   eager?: boolean;
+  /** Show the label over the image (default true). */
+  caption?: boolean;
 }
 
 /** A labelled image that opens the full-screen gallery when tapped. */
-export function ImageButton({ ids, index = 0, sizes, className = '', eager }: Props) {
+export function ImageButton({ ids, index = 0, sizes, className = '', eager, caption = true }: Props) {
   const openGallery = useGallery();
   const id = ids[index];
   return (
@@ -23,7 +25,7 @@ export function ImageButton({ ids, index = 0, sizes, className = '', eager }: Pr
       onClick={() => openGallery(ids, index)}
       aria-label={`View larger: ${mediaById[id]?.label ?? 'image'}`}
     >
-      <Img id={id} sizes={sizes} caption eager={eager} />
+      <Img id={id} sizes={sizes} caption={caption} eager={eager} />
       <span className="image-button__hint" aria-hidden="true">
         <ExpandIcon />
       </span>

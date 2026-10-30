@@ -40,35 +40,100 @@
     ]
   },
   "anugrah-premier-1": {
-    "width": 680,
-    "height": 800,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      680
+      1024,
+      1370
     ]
   },
   "anugrah-premier-2": {
-    "width": 785,
-    "height": 620,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
+    ]
+  },
+  "anugrah-premier-3": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anugrah-premier-4": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anugrah-premier-5": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "anugrah-premier-6": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
     ]
   },
   "anugrah-junior-1": {
-    "width": 680,
-    "height": 800,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      680
+      1024,
+      1370
     ]
   },
   "anugrah-junior-2": {
-    "width": 785,
-    "height": 620,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
+    ]
+  },
+  "anugrah-junior-3": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
+    ]
+  },
+  "anugrah-junior-4": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anugrah-junior-5": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
     ]
   },
   "anugrah-dining": {
@@ -114,22 +179,13 @@
       785
     ]
   },
-  "anugrah-bocce": {
-    "width": 1370,
-    "height": 1024,
+  "anugrah-pickleball": {
+    "width": 1920,
+    "height": 1000,
     "widths": [
       640,
       1024,
-      1370
-    ]
-  },
-  "anugrah-croquet": {
-    "width": 1370,
-    "height": 1024,
-    "widths": [
-      640,
-      1024,
-      1370
+      1600
     ]
   },
   "anugrah-art-class": {
@@ -217,27 +273,100 @@
     ]
   },
   "anuprit-deluxe": {
-    "width": 785,
-    "height": 620,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
+    ]
+  },
+  "anuprit-deluxe-2": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anuprit-deluxe-3": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anuprit-deluxe-4": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
     ]
   },
   "anuprit-premier": {
-    "width": 785,
-    "height": 620,
+    "width": 1370,
+    "height": 1024,
     "widths": [
       640,
-      785
+      1024,
+      1370
+    ]
+  },
+  "anuprit-premier-2": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anuprit-premier-3": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
+    ]
+  },
+  "anuprit-premier-4": {
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      640,
+      1024
     ]
   },
   "anuprit-junior": {
-    "width": 785,
-    "height": 620,
+    "width": 1275,
+    "height": 690,
     "widths": [
       640,
-      785
+      1024,
+      1275
+    ]
+  },
+  "anuprit-junior-2": {
+    "width": 1370,
+    "height": 1024,
+    "widths": [
+      640,
+      1024,
+      1370
+    ]
+  },
+  "anuprit-junior-3": {
+    "width": 1275,
+    "height": 690,
+    "widths": [
+      640,
+      1024,
+      1275
     ]
   },
   "anuprit-table": {

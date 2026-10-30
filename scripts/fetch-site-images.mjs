@@ -10,6 +10,8 @@ import path from 'node:path';
 
 const PAGES = [
   'https://nynehotels.com/anugrah/',
+  'https://nynehotels.com/anugrah/accommodation/premier-room/',
+  'https://nynehotels.com/anugrah/accommodation/junior-suite/',
   'https://nynehotels.com/anugrah/location/',
   'https://nynehotels.com/anugrah/dining/',
   'https://nynehotels.com/anugrah/wellness-spa/',
@@ -21,6 +23,9 @@ const PAGES = [
   'https://nynehotels.com/anugrah/experiences/art-classes/',
   'https://nynehotels.com/anugrah/experiences/beach-tennis/',
   'https://nynehotels.com/anuprit/',
+  'https://nynehotels.com/anuprit/accommodation/deluxe-room-with-courtyard-view/',
+  'https://nynehotels.com/anuprit/accommodation/premier-room-with-ocean-view/',
+  'https://nynehotels.com/anuprit/accommodation/junior-suite/',
   'https://nynehotels.com/anuprit/location/',
   'https://nynehotels.com/anuprit/dining/',
   'https://nynehotels.com/anuprit/wellness-spa/',

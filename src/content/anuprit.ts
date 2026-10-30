@@ -33,7 +33,7 @@ export const anuprit: Property = {
       bed: pdfFact('King-size'),
       occupancy: pdfFact('2 adults'),
       features: pdfFact(['Courtyard view', 'En-suite bathroom', 'Air conditioning', 'Ceiling fan', 'Stocked mini bar']),
-      assetIds: ['anuprit-deluxe'],
+      assetIds: ['anuprit-deluxe', 'anuprit-deluxe-2', 'anuprit-deluxe-3', 'anuprit-deluxe-4'],
     },
     {
       id: 'premium-ocean',
@@ -43,7 +43,7 @@ export const anuprit: Property = {
       bed: pdfFact('King-size'),
       occupancy: pdfFact('3 adults'),
       features: pdfFact(['Ocean view', 'En-suite bathroom', 'Air conditioning', 'Ceiling fan', 'Stocked mini bar']),
-      assetIds: ['anuprit-premier'],
+      assetIds: ['anuprit-premier', 'anuprit-premier-2', 'anuprit-premier-3', 'anuprit-premier-4'],
     },
     {
       id: 'junior-suite',
@@ -53,7 +53,7 @@ export const anuprit: Property = {
       bed: pdfFact('King-size'),
       occupancy: pdfFact('3 adults'),
       features: fact(['Oceanfront', 'Private balcony', 'Walk-in closet', 'En-suite bathroom', 'Infinity-pool views'], HOME, VERIFIED),
-      assetIds: ['anuprit-junior'],
+      assetIds: ['anuprit-junior', 'anuprit-junior-2', 'anuprit-junior-3'],
     },
   ],
 
