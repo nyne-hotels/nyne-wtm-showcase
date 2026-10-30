@@ -41,7 +41,14 @@ export function RoomDetail() {
     <div className="page page--room-detail">
       <div className="room-detail">
         <div className="room-detail__visual">
-          <ImageButton ids={room.assetIds} sizes="(orientation: landscape) 62vw, 100vw" className="room-detail__lead" eager />
+          {/* The inset sits over the lead's caption corner, so only one label shows. */}
+          <ImageButton
+            ids={room.assetIds}
+            sizes="(orientation: landscape) 62vw, 100vw"
+            className="room-detail__lead"
+            eager
+            caption={!room.assetIds[1]}
+          />
           {room.assetIds[1] && <ImageButton ids={room.assetIds} index={1} sizes="28vw" className="room-detail__inset" />}
           <span className="room-detail__folio">0{roomNumber} / 0{p.rooms.length}</span>
         </div>

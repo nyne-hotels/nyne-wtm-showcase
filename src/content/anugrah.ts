@@ -29,7 +29,7 @@ export const anugrah: Property = {
       bed: pdfFact('King-size'),
       occupancy: pdfFact('2 adults'),
       features: pdfFact(['Ocean view', 'Private terrace', 'En-suite bathroom', 'Air conditioning', 'Stocked mini bar']),
-      assetIds: ['anugrah-junior-1', 'anugrah-junior-2'],
+      assetIds: ['anugrah-junior-1', 'anugrah-junior-2', 'anugrah-junior-3', 'anugrah-junior-4', 'anugrah-junior-5'],
     },
     {
       id: 'premium-suite-ocean',
@@ -39,7 +39,7 @@ export const anugrah: Property = {
       bed: pdfFact('King-size'),
       occupancy: pdfFact('3 adults'),
       features: pdfFact(['Ocean view', 'Private terrace', 'En-suite bathroom', 'Air conditioning', 'Stocked mini bar']),
-      assetIds: ['anugrah-premier-1', 'anugrah-premier-2'],
+      assetIds: ['anugrah-premier-1', 'anugrah-premier-2', 'anugrah-premier-3', 'anugrah-premier-4', 'anugrah-premier-5', 'anugrah-premier-6'],
     },
   ],
 
@@ -66,9 +66,9 @@ export const anugrah: Property = {
 
   wellness: [
     { id: 'spa', name: 'Spa treatments', locationType: 'on-site', description: pdfFact('Payable spa treatments are available for guests.'), assetIds: ['anugrah-spa'] },
+    { id: 'pickleball', name: 'Pickleball', locationType: 'on-site', description: pdfFact('Pickleball is available as a payable leisure activity.'), assetIds: ['anugrah-pickleball'] },
     { id: 'beach-tennis', name: 'Beach tennis', locationType: 'on-site', description: pdfFact('Beach tennis is included among the hotel leisure facilities.'), assetIds: ['anugrah-beach-tennis'] },
-    { id: 'bocce', name: 'Bocce on the lawn', locationType: 'on-site', description: fact('Bocce on the lawn is listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-bocce'] },
-    { id: 'croquet', name: 'Croquet on the lawn', locationType: 'on-site', description: fact('Croquet on the lawn is listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-croquet'] },
+    { id: 'board-games', name: 'Board games', locationType: 'on-site', description: pdfFact('Board games are available for relaxed time together at the hotel.'), assetIds: ['anugrah-board-games'] },
     { id: 'art-classes', name: 'Art classes', locationType: 'on-site', description: fact('Creative art classes are listed among Anugrah experiences.', HOME, VERIFIED), assetIds: ['anugrah-art-class'] },
   ],
 
@@ -121,7 +121,7 @@ export const anugrah: Property = {
       heading: 'Wellness and leisure',
       rows: [
         { label: 'Wellness', fact: pdfFact('Payable spa treatments, yoga on request and beach gym') },
-        { label: 'Activities', fact: pdfFact('Water sports, beach tennis and payable pickleball') },
+        { label: 'Activities', fact: pdfFact('Board games, water sports, beach tennis and payable pickleball') },
         { label: 'Experiences', fact: pdfFact('Excursion arrangements and curated dining experiences') },
       ],
     },

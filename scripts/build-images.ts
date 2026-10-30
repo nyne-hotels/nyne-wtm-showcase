@@ -13,10 +13,12 @@ const MANIFEST = path.resolve('src/content/media.generated.json');
 const WIDTHS = [640, 1024, 1600];
 const HIGH_QUALITY = new Set([
   'anugrah-lunuganga', 'anugrah-brief-garden', 'anugrah-madu-river', 'anugrah-water-sports',
-  'anugrah-beach-tennis', 'anugrah-bocce', 'anugrah-croquet', 'anugrah-art-class',
+  'anugrah-beach-tennis', 'anugrah-pickleball', 'anugrah-art-class',
   'anuprit-lunuganga', 'anuprit-brief-garden', 'anuprit-madu-river', 'anuprit-water-sports',
   'anuprit-pickleball', 'anuprit-beach-tennis', 'anuprit-art-class',
 ]);
+// Room photos are viewed full-screen in the lightbox, so keep them crisp too.
+const isHighQuality = (id: string) => HIGH_QUALITY.has(id) || /-(premier|junior|deluxe)(-\d+)?$/.test(id);
 
 export interface GeneratedMedia {
   width: number;
@@ -46,7 +48,7 @@ for (const asset of media) {
   for (const w of unique) {
     await sharp(src)
       .resize({ width: w, withoutEnlargement: true })
-      .webp({ quality: HIGH_QUALITY.has(asset.id) ? 84 : 78 })
+      .webp({ quality: isHighQuality(asset.id) ? 84 : 78 })
       .toFile(path.join(OUT, `${asset.id}-${w}.webp`));
   }
   manifest[asset.id] = {
